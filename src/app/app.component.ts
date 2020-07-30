@@ -23,10 +23,14 @@ import { Component } from '@angular/core';
         <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
       </li>
     </ul>
+    <mdb-progress value="25" min="0" max="100" type="success" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</mdb-progress>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [`.progress-bar, .progress {
+    height: 30px !important;
+  }`]
 })
 export class AppComponent {
   title = 'MyAppName';
+  progressValueNow = 68;
 }
